@@ -1,0 +1,180 @@
+// import {
+//   Image,
+//   ScrollView,
+//   StyleSheet,
+//   Text,
+//   TouchableOpacity,
+//   View,
+//   TextInput,
+// } from 'react-native';
+// import {useState} from 'react';
+// import React from 'react';
+
+// const ChatScreen = ({navigation}) => {
+//   const [message, setMessage] = useState('');
+//   const [messages, setMessages] = useState([]);
+
+//   const handleSend = () => {
+//     if (message.trim() !== '') {
+//       setMessages([...messages, message]);
+//       setMessage('');
+//     }
+//   };
+//   return (
+//     <View>
+//       <View style={styles.headerStyle}>
+//         <TouchableOpacity onPress={() => navigation.navigate('MyTabs')}>
+//           <Image
+//             source={require('../../icons/back.png')}
+//             style={styles.immgStyle}
+//           />
+//         </TouchableOpacity>
+//         <View style={styles.rightImmgStyle}>
+//           <TouchableOpacity>
+//             <Image
+//               source={require('../../icons/volume-mute.png')}
+//               style={styles.immgStyle}
+//             />
+//           </TouchableOpacity>
+//           <TouchableOpacity>
+//             <Image
+//               source={require('../../icons/share.png')}
+//               style={styles.immgStyle}
+//             />
+//           </TouchableOpacity>
+//         </View>
+//       </View>
+
+//       <ScrollView>
+//         {/* mainContainer */}
+//         <View style={styles.container2}>
+//           <ScrollView contentContainerStyle={styles.messagesContainer}>
+//             <View style={styles.questionContainer}>
+//               <Image
+//                 source={require('../../icons/GPT4.png')}
+//                 style={styles.image}
+//               />
+//               <Text style={styles.question}>How may I help you?</Text>
+//             </View>
+//             {messages.map((msg, index) => (
+//               <Text style={styles.message} key={index}>
+//                 {msg}
+//               </Text>
+//             ))}
+//           </ScrollView>
+//           <View style={styles.inputContainer}></View>
+//         </View>
+
+//         {/* Footer */}
+//         <View style={styles.container}>
+//           <TextInput
+//             style={styles.textInput}
+//             placeholder="Type your message..."
+//             placeholderTextColor={'black'}
+//             onChangeText={setMessage}
+//             onPress={handleSend}
+//           />
+//           <TouchableOpacity>
+//             <Image
+//               source={require('../../icons/microphone.png')}
+//               style={styles.immgStyle}
+//             />
+//           </TouchableOpacity>
+//         </View>
+//       </ScrollView>
+//     </View>
+//   );
+// };
+
+// export default ChatScreen;
+
+// const styles = StyleSheet.create({
+//   headerStyle: {
+//     flex: 1,
+//     height: 60,
+//     width: '100%',
+//     flexDirection: 'row',
+//   },
+//   immgStyle: {width: 25, height: 25, margin: 18},
+//   rightImmgStyle: {
+//     flex: 2,
+//     flexDirection: 'row',
+//     justifyContent: 'flex-end',
+//   },
+//   container: {
+//     backgroundColor: 'red',
+//     marginTop: '154%',
+//     flexDirection: 'row',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//     backgroundColor: '#f2f2f2',
+//     paddingHorizontal: 10,
+//     paddingVertical: 5,
+//     alignSelf: 'flex-end',
+//   },
+//   textInput: {
+//     flex: 1,
+//     height: 40,
+//     backgroundColor: 'white',
+//     borderRadius: 20,
+//     paddingHorizontal: 10,
+//     marginRight: 10,
+//     color: 'black',
+//   },
+
+//   container2: {
+//     flex: 1,
+//   },
+//   messagesContainer: {
+//     flexGrow: 1,
+//     paddingHorizontal: 16,
+//     paddingBottom: 8,
+//     marginTop:80
+//   },
+//   questionContainer: {
+//     flexDirection: 'row',
+//     alignItems: 'center',
+//     marginBottom: 16,
+//   },
+//   image: {
+//     width: 24,
+//     height: 24,
+//     marginRight: 8,
+//   },
+//   question: {
+//     fontSize: 16,
+//     color: 'black',
+//   },
+//   message: {
+//     fontSize: 16,
+//     marginBottom: 8,
+//   },
+//   inputContainer: {
+//     flexDirection: 'row',
+//     alignItems: 'center',
+//     paddingHorizontal: 16,
+//     paddingVertical: 8,
+//     borderTopWidth: 1,
+//     borderTopColor: '#CCCCCC',
+//   },
+//   input: {
+//     flex: 1,
+//     height: 40,
+//     paddingHorizontal: 8,
+//     borderWidth: 1,
+//     borderColor: '#CCCCCC',
+//     borderRadius: 4,
+//     marginRight: 8,
+//   },
+//   sendButton: {
+//     backgroundColor: '#007AFF',
+//     paddingHorizontal: 12,
+//     paddingVertical: 8,
+//     borderRadius: 4,
+//   },
+//   sendButtonText: {
+//     color: '#FFFFFF',
+//     fontSize: 16,
+//     fontWeight: 'bold',
+//   },
+// });
